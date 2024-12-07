@@ -50,6 +50,7 @@
     </div>
 
     <section class="listings">
+    <a href="..\produtos\pagina-produtos.php" class="listing">
         <div class="listing">
             <img src="imagens/calca-cargo.png" alt="">
             <div class="info">
@@ -57,7 +58,8 @@
                 <p>ShoppingBuy</p>
                 <p>R$150 </p>
             </div>
-        
+            </a>
+    </section>
         
 
     <!-- Fundo Escuro -->

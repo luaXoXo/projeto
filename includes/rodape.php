@@ -1,4 +1,4 @@
-<?php
+
 
 <footer>
     <h2>Sobre Nós</h2>
@@ -10,4 +10,3 @@
     <h2>desenvolvedores</h2>
 
 </footer>
-?>
