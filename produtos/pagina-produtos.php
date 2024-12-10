@@ -22,22 +22,31 @@
 
             <button>Adicionar ao Carrinho</button>
 
-            <div class="other-sellers">
-                <h3>Outros Vendedores</h3>
-                <div>
-                    <span>R$200,99</span>
-                    <span>Envio Nacional</span>
-                </div>
-                <div>
-                    <span>R$300,00</span>
-                    <span>Envio Nacional</span>
-                </div>
-            </div>
-
-            <div class="reviews">
-                <p><strong>Avaliação dos Clientes:</strong> 4.91 ★★★★★</p>
-            </div>
+            <div class="comments-section">
+    <h3>Deixe um Comentário</h3>
+    <form action="#" method="post">
+        <label for="rating">Avaliação:</label>
+        <select id="rating" name="rating">
+            <option value="5">5 ★★★★★</option>
+            <option value="4">4 ★★★★☆</option>
+            <option value="3">3 ★★★☆☆</option>
+            <option value="2">2 ★★☆☆☆</option>
+            <option value="1">1 ★☆☆☆☆</option>
+        </select>
+        <label for="comment">Comentário:</label>
+        <textarea id="comment" name="comment" rows="4" placeholder="Escreva seu comentário aqui..." required></textarea>
+        <button type="submit">Enviar Comentário</button>
+    </form>
+    <div class="user-comments">
+        <h4>Comentários Recentes:</h4>
+        <div class="comment">
+            <p><strong>João:</strong> Produto excelente! Muito confortável. <span>★★★★★</span></p>
+        </div>
+        <div class="comment">
+            <p><strong>Ana:</strong> Gostei bastante, mas achei o tamanho um pouco pequeno. <span>★★★★☆</span></p>
         </div>
     </div>
+</div>
+
 </body>
 </html>

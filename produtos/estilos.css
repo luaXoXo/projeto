@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f5f5f5;
 }
+
 .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -13,25 +14,31 @@ body {
     gap: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .image-section {
     flex: 1;
 }
+
 .image-section img {
     width: 100%;
     border-radius: 10px;
 }
+
 .details-section {
     flex: 2;
 }
+
 .details-section h1 {
     font-size: 24px;
     margin-bottom: 10px;
 }
+
 .details-section .price {
     font-size: 24px;
     color: #e53935;
     margin: 10px 0;
 }
+
 .details-section select,
 .details-section button {
     padding: 10px;
@@ -39,6 +46,7 @@ body {
     margin-top: 10px;
     width: 100%;
 }
+
 .details-section button {
     background-color: #1d7373;
     color: white;
@@ -46,19 +54,80 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
+
 .details-section button:hover {
     background-color: #1d7373c4;
 }
+
 .other-sellers {
     margin-top: 20px;
     font-size: 14px;
 }
+
 .other-sellers div {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
 }
+
 .reviews {
     margin-top: 20px;
     font-size: 14px;
+}
+
+.comments-section {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.comments-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.comments-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comments-section label {
+    font-weight: bold;
+}
+
+.comments-section select,
+.comments-section textarea,
+.comments-section button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comments-section button {
+    background-color: #1d7373;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.comments-section button:hover {
+    background-color: #1d7373c4;
+}
+
+.user-comments {
+    margin-top: 20px;
+}
+
+.user-comments h4 {
+    margin-bottom: 10px;
+}
+
+.user-comments .comment {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }

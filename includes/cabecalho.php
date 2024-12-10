@@ -16,7 +16,7 @@
                 
             </div>
         </div>
-        <img src="../home/imagens/iocn.png" alt="Logo">
+       <a href="../home/home.php"><img src="../home/imagens/iocn.png" alt="Logo"></a>
 
         <script src="../home/scripit.js"></script>
         

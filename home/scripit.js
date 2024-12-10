@@ -34,3 +34,22 @@ document.querySelectorAll('.categories a').forEach(anchor => {
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
+
+function rolagemEsquerda(containerId){
+    const container = document.getElementById(containerId);
+    container.scrollBy({
+        left: -300, // Ajuste conforme o tamanho do card
+        behavior: 'smooth'
+    });
+    
+}
+
+
+
+function rolagemDireita(containerId) {
+    const container = document.getElementById(containerId);
+    container.scrollBy({
+        left: 300, // Ajuste conforme o tamanho do card
+        behavior: 'smooth'
+    });
+}

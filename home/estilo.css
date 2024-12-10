@@ -3,25 +3,25 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     color: #333;
-}
-
-header img {
-    height: px 40;
-}
-header nav a {
+  }
+  
+  header img {
+    height: 40px;
+  }
+  header nav a {
     text-decoration: none;
     color: #333;
     margin-left: 20px;
     font-weight: bold;
-}
-
-/* Menu dropdown */
-.menu-container {
+  }
+  
+  /* Menu dropdown */
+  .menu-container {
     position: relative;
-}
-.menu-toggle {
+  }
+  .menu-toggle {
     background-color: #1d7373;
     color: white;
     border: none;
@@ -29,8 +29,9 @@ header nav a {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-}
-.menu-options {
+    margin-left: 10px;
+  }
+  .menu-options {
     display: none;
     position: absolute;
     top: 40px;
@@ -41,21 +42,21 @@ header nav a {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 10px 0;
-}
-.menu-options a {
+  }
+  .menu-options a {
     display: block;
     text-decoration: none;
     color: #333;
     padding: 10px 20px;
     font-size: 16px;
     transition: background-color 0.3s;
-}
-.menu-options a:hover {
+  }
+  .menu-options a:hover {
     background-color: #f0f0f0;
-}
-
-/* Modal */
-.modal {
+  }
+  
+  /* Modal */
+  .modal {
     display: none;
     position: fixed;
     top: 50%;
@@ -68,35 +69,35 @@ header nav a {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     z-index: 1000;
-}
-.modal.active {
+  }
+  .modal.active {
     display: block;
-}
-.modal-header {
+  }
+  .modal-header {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-.modal-content p {
+  }
+  .modal-content p {
     margin-bottom: 10px;
-}
-.modal-footer {
+  }
+  .modal-footer {
     text-align: right;
-}
-.modal-footer button {
+  }
+  .modal-footer button {
     padding: 10px 15px;
     border: none;
     background-color: #333;
     color: white;
     border-radius: 5px;
     cursor: pointer;
-}
-.modal-footer button.close {
+  }
+  .modal-footer button.close {
     background-color: #333;
-}
-
-/* Fundo escuro ao abrir o modal */
-.overlay {
+  }
+  
+  /* Fundo escuro ao abrir o modal */
+  .overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -105,58 +106,61 @@ header nav a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
-}
-.overlay.active {
+  }
+  .overlay.active {
     display: block;
-}
-
-header {
-    padding: 10px 20px;
+  }
+  
+  header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
-}
-header img {
+  }
+  header img {
     height: 60px;
-}
-header nav a {
+  }
+  header nav a {
     text-decoration: none;
     color: #333;
     margin-right: 20px;
     font-weight: bold;
-}
-
-.video-background {
+  }
+  
+  .video-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1; /* Certifica-se de que o vídeo fique atrás do conteúdo */
-    overflow: hidden;
-}
-
-#background-video {
+  }
+  
+  #background-video {
     width: 100%;
     height: 50%;
     object-fit: cover;
-
-    
-}
-
-.search-bar.search {
+    background: (90deg, rgb(34, 105, 179) 25%, rgba(255, 255, 255, 0) 100%);
+  }
+  
+  .search-bar.search {
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.7); /* Fundo semitransparente para melhorar a visibilidade */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.7
+    ); /* Fundo semitransparente para melhorar a visibilidade */
     padding: 20px;
     border-radius: 8px;
     max-width: 600px;
     margin: 50px auto;
-}
-
-.search-bar {
+  }
+  
+  .search-bar {
     margin: 20px auto;
     padding: 10px;
     max-width: 800px;
@@ -165,119 +169,38 @@ header nav a {
     display: flex;
     justify-content: space-between;
     border: 1px solid #ddd;
-}
-.search-bar input {
+  }
+  .search-bar input {
     border: none;
     padding: 10px;
     width: 100%;
     margin-right: 10px;
-}
-.search-bar button {
+  }
+  .search-bar button {
     padding: 10px 15px;
     border: none;
     background-color: #1d7373;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.category {
-    text-align: center;
-    cursor: pointer;
-}
-.listings {
-    margin-top: 15%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    
-    padding: 20px;
-}
-.listing {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.listing img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.listing .info {
-    padding: 15px;
-}
-.listing .info h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-.listing .info p {
-    color: #666;
-    font-size: 14px;
-}
-
-
-
-.categories h2 {
-    margin: 0 0 10px;
-}
-
-.categories ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-
-.categories li {
-    margin: 0;
-}
-
-
-.categories a:hover {
-    background-color: #fff;
-}
-
-/* Conteúdo das categorias */
-.content {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-section h3 {
-    margin-top: 0;
-}
-
-section p {
-    margin: 0;
-}
-
-.categories {
-   
+  }
+  
+  .categories {
     margin-top: -2%;
-margin: auto;
+    margin: auto;
     max-width: 800px;
     display: flex;
     justify-content: space-between;
-}
-
-
-.categories ul {
+  }
+  .categories ul {
     margin: auto;
     list-style: none;
     padding: 0;
     display: flex;
     gap: 15px;
-}
-
-.categories li a {
+  }
+  
+  .categories li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -285,8 +208,126 @@ margin: auto;
     background-color: #1d7373;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+  }
+  
+  .categories li a:hover {
+    background-color: #d1d1d1;
+  }
+  .listings {
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+  }
+  .destaque {
+    margin-top: 11%;
+    background-color: #1d7373;
+  }
+  
+  .card {
+    background-color: #c3d8ce;
+    width: 20%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-right: 1%;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .foto {
+    margin-top: 4%;
+    height: 50%;
+    width: 50%;
+  }
+
+  
+  .titulo-destaque {
+    place-self: center;
+    color: white;
+    padding-top: 1%;
+  }
+
+  .categorias-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
 }
 
-.categories li a:hover {
-    background-color: #d1d1d1;
+.categoria {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
+
+.categoria {
+    margin-bottom: 30px;
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.produtos-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+    scrollbar-width: none; /* Remove scrollbar visível */
+}
+
+.produtos-container::-webkit-scrollbar {
+    display: none; /* Remove scrollbar visível no Chrome/Safari */
+}
+
+.card {
+    min-width: 200px; /* Define uma largura fixa para os cards */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+button.prev,
+button.next {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: #555;
+}
+
+
