@@ -1,15 +1,15 @@
 <?php
-// Parâmetros de acesso ao servidor 
+// Parâmetros de acesso ao servidor
 $usuario = 'root';
 $senha = '';
-$database = 'cartle-matheus';
+$database = 'cartle';
 $host = 'localhost';
-
+ 
 // Acessar a função de conexão ao servidor de BD
-$mysqli = new mysqli($host, $usuario, $senha, $database);
-
+$mysqli = mysqli_connect($host, $usuario, $senha, $database);
+ 
 // Definindo o charset UTF8 para a conexão
-
+ 
 // Verificando a conexão
 /* if($conexao === false){
     die("Erro: ".mysqli_connect_error());

@@ -6,13 +6,11 @@
     <title>Cartle-Produto</title>
     <link rel="stylesheet" href="..\home\estilo.css">
     
-< <header>
+<header>
         <div class="menu-container">
             <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
             <div class="menu-options" id="menuOptions">
-                <a href="../login/login.php">Login</a>
-                <a href="../login/registro.php">Registrar</a>
-                <a href="#suporte">Suporte</a>
+                <a href="../login/login.php">ADM</a>
             </div>
         </div>
          <a href="../home/home.php"><img src="../home/imagens/iocn.png" alt="Logo"></a>

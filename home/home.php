@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<?php
+ require "../includes/cabecalho.php";
+ require "../login/funcoes-produto.php";
+   
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página</title>
-    <link rel="stylesheet" href="estilo.css"> <!-- Arquivo CSS -->
-</head>
 
-<body>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="menu-container">
-            <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
-            <div class="menu-options" id="menuOptions">
-                <a href="../login/login.php">Login</a>
-                <a href="../login/registro.php">Registrar</a>
-                <a href="#suporte">Suporte</a>
-            </div>
-        </div>
-        <img src="imagens/iocn.png" alt="Logo">
-        <div class="cart-container">
-    <button class="cart-button">
-      🛒 <span class="cart-count">3</span>
-    </button>
-  </div>
-    </header>
+ $homeproduto = separacaoProduto($mysqli);
+
+
+
+   ?>
     <div class="video-background">
         <video autoplay muted loop id="background-video">
             <source src="imagens/8306452-uhd_4096_2160_25fps.mp4" type="video/mp4">
@@ -38,11 +21,12 @@
     </div>
 
     <!-- Aba de Categorias -->
-    <div class="categories">
+    <div class="categorias">
         <ul>
-            <li><a href="#masculino">Masculino</a></li>
-            <li><a href="#feminino">Feminino</a></li>
-            <li><a href="#infantil">Infantil</a></li>
+            <li><a href="../categorias/masculino.php">Masculino
+            </a></li>
+            <li><a href="../categorias/feminino.php">Feminino</a></li>
+            <li><a href="../categorias/infantil.php">Infantil</a></li>
            
         </ul>
     </div>
@@ -55,34 +39,19 @@
             <button class="prev" onclick="rolagemEsquerda('destaques')">&#8592;</button>
 
             <div class="produtos-container" id="destaques">
+                <?php foreach($homeproduto as $produto){ ?>
+
+                
                 <div class="card">
-                    <img src="imagens/calca-cargo.png" alt="Produto Masculino">
+                    <a href="../produtos/pagina-produtos.php"></a>
+                    <img src="../home/imagens/<?=$produto['imagem']?>" alt="Produto Masculino">
                     <div class="info">
-                        <h3>Camiseta</h3>
-                        <p>R$50</p>
+                        <h3><?= $produto['produto']?></h3>
+                        <p>R$<?=$produto['valor']?></p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="imagens/produto-masculino2.png" alt="Produto Masculino">
-                    <div class="info">
-                        <h3>Jaqueta</h3>
-                        <p>R$200</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="imagens/produto-masculino2.png" alt="Produto Masculino">
-                    <div class="info">
-                        <h3>Jaqueta</h3>
-                        <p>R$200</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="imagens/produto-masculino2.png" alt="Produto Masculino">
-                    <div class="info">
-                        <h3>Jaqueta</h3>
-                        <p>R$200</p>
-                    </div>
-                </div>
+            <?php } ?>
+               
                 <!-- Adicione mais cards conforme necessário -->
             </div>
             <button class="next" onclick="rolagemDireita('destaques')">&#8594;</button>
@@ -90,7 +59,7 @@
     </div>
     <!-- Repita o mesmo para outras categorias como Promoções e Lançamentos -->
     <div class="categoria">
-        <h2>Promoçoes</h2>
+        <h2>Promoções</h2>
         <div class="carrossel">
 
             <button class="prev" onclick="rolagemEsquerda('promocao')">&#8592;</button>

@@ -1,4 +1,10 @@
-<?php require "../includes/cabecalho.php" ?>
+<?php 
+require "../includes/cabecalho.php"
+require "../login/funcoes-produto.php"
+      
+
+
+?>
     <title>Product Page</title>
   <link rel="stylesheet" href="estilos.css">  </link>
   

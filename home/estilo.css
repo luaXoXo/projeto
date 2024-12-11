@@ -146,6 +146,7 @@ header nav a {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  
 }
 
 .cart-button:hover {
@@ -221,14 +222,14 @@ header nav a {
     cursor: pointer;
   }
   
-  .categories {
+  .categorias {
     margin-top: -2%;
     margin: auto;
     max-width: 800px;
     display: flex;
     justify-content: space-between;
   }
-  .categories ul {
+  .categorias ul {
     margin: auto;
     list-style: none;
     padding: 0;
@@ -236,7 +237,7 @@ header nav a {
     gap: 15px;
   }
   
-  .categories li a {
+  .categorias li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -246,7 +247,7 @@ header nav a {
     transition: background-color 0.3s ease;
   }
   
-  .categories li a:hover {
+  .categorias li a:hover {
     background-color: #d1d1d1;
   }
   .listings {
@@ -374,7 +375,7 @@ button.next:hover {
 /* Responsividade geral para telas menores */
 @media (max-width: 1024px) {
   header {
-    flex-direction: column;
+    
     align-items: center;
     padding: 10px;
   }
@@ -388,7 +389,7 @@ button.next:hover {
   }
 
   .menu-container {
-    width: 100%;
+    
     text-align: right;
   }
 
@@ -419,7 +420,7 @@ button.next:hover {
 
   .categories li a {
     display: block;
-    width: 100%;
+  
     text-align: center;
   }
 
@@ -456,22 +457,4 @@ button.next:hover {
   }
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 
-  header img {
-    height: 50px;
-  }
-
-  header nav {
-    flex-grow: 1;
-    justify-content: space-around;
-  }
-
-  .cart-container {
-    margin-top: 10px;
-  }
-}
