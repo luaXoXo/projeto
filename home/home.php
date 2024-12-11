@@ -20,6 +20,11 @@
             </div>
         </div>
         <img src="imagens/iocn.png" alt="Logo">
+        <div class="cart-container">
+    <button class="cart-button">
+      🛒 <span class="cart-count">3</span>
+    </button>
+  </div>
     </header>
     <div class="video-background">
         <video autoplay muted loop id="background-video">

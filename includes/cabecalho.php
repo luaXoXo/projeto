@@ -6,17 +6,24 @@
     <title>Cartle-Produto</title>
     <link rel="stylesheet" href="..\home\estilo.css">
     
-<header>
+< <header>
         <div class="menu-container">
             <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
             <div class="menu-options" id="menuOptions">
-                <a href="..\login\login.php">Login</a>
-                <a href="..\login\registro.php">Registrar</a>
+                <a href="../login/login.php">Login</a>
+                <a href="../login/registro.php">Registrar</a>
                 <a href="#suporte">Suporte</a>
-                
             </div>
         </div>
-       <a href="../home/home.php"><img src="../home/imagens/iocn.png" alt="Logo"></a>
+         <a href="../home/home.php"><img src="../home/imagens/iocn.png" alt="Logo"></a>
+        <div class="cart-container">
+    <button class="cart-button">
+      🛒 <span class="cart-count">3</span>
+    </button>
+  </div>
+            
+        </div>
+      
 
         <script src="../home/scripit.js"></script>
         

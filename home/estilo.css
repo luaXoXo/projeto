@@ -1,21 +1,14 @@
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+  box-sizing: border-box;
+}
   
-  header img {
-    height: 40px;
-  }
-  header nav a {
-    text-decoration: none;
-    color: #333;
-    margin-left: 20px;
-    font-weight: bold;
-  }
+
   
   /* Menu dropdown */
   .menu-container {
@@ -110,24 +103,67 @@ body {
   .overlay.active {
     display: block;
   }
-  
+
   header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
+    box-sizing: border-box; /* Inclui padding no tamanho total */
   }
-  header img {
-    height: 60px;
-  }
-  header nav a {
-    text-decoration: none;
-    color: #333;
-    margin-right: 20px;
-    font-weight: bold;
-  }
+
+/* Estilo da logo e menu no header */
+header img {
+  height: 60px;
+  max-width: 100%; /* Impede que a logo ultrapasse os limites */
+  flex-shrink: 0; /* Garante que a logo não reduza seu tamanho */
+  margin: 0; /* Remove margens extras */
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+}
+
+.cart-button {
+  position: relative;
+  background-color: #1d7373;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cart-button:hover {
+  background-color: #155555;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff3d3d;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
   
   .video-background {
     position: absolute;
@@ -275,27 +311,30 @@ body {
 }
 
 .produtos-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 10px;
-    scrollbar-width: none; /* Remove scrollbar visível */
+  display: flex;
+  overflow-x: auto; /* Permite rolagem horizontal */
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  scrollbar-width: none; /* Remove a barra de rolagem visível */
+  flex-wrap: nowrap; /* Garante que os cards não quebrem para baixo */
+  justify-content: flex-start; /* Mantém alinhado à esquerda */
 }
 
 .produtos-container::-webkit-scrollbar {
-    display: none; /* Remove scrollbar visível no Chrome/Safari */
+  display: none; /* Remove scrollbar visível no Chrome/Safari */
 }
 
 .card {
-    min-width: 200px; /* Define uma largura fixa para os cards */
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    background-color: #fff;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+  min-width: 250px; /* Define uma largura fixa para os cards */
+  flex-shrink: 0; /* Impede que os cards diminuam de tamanho */
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
 .card img {
@@ -330,4 +369,109 @@ button.next:hover {
     background-color: #555;
 }
 
+/* Estilos gerais permanecem os mesmos */
 
+/* Responsividade geral para telas menores */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  header img {
+    height: 50px;
+  }
+
+  header nav a {
+    margin: 10px 0;
+  }
+
+  .menu-container {
+    width: 100%;
+    text-align: right;
+  }
+
+  .menu-options {
+    width: 100%;
+    left: 0;
+  }
+
+  .search-bar {
+    max-width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+
+  .categories {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .categories li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .listings {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+/* Responsividade para telas muito pequenas (smartphones) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  header img {
+    height: 50px;
+    margin-right: 0; /* Remove deslocamentos adicionais */
+  }
+
+
+  header nav {
+    flex-grow: 1; /* Permite o menu expandir se necessário */
+  }
+
+  header nav a {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  header img {
+    height: 50px;
+  }
+
+  header nav {
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+
+  .cart-container {
+    margin-top: 10px;
+  }
+}
