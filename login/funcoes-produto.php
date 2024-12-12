@@ -55,12 +55,52 @@ $sql = "SELECT idProduto, produto, imagem, categoria, tipo, descricao, data, val
  
 $resultado = executarQuery($mysqli, $sql);
 return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
-}
 
-function separacaoProduto($mysqli){
+}
+function destaques($mysqli){
     $sql = "SELECT idProduto, produto, imagem, categoria,tipo,descricao, data,valor FROM produtos WHERE tipo = 'destaque' ";
     $resultado = executarQuery($mysqli, $sql);
     return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
 }
+function promocoes($mysqli){
+    $sql = "SELECT idProduto, produto, imagem, categoria,tipo,descricao, data,valor FROM produtos WHERE tipo = 'promoção' ";
+    $resultado = executarQuery($mysqli, $sql);
+    return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+
+}
+function lancamentos($mysqli){
+    $sql = "SELECT idProduto, produto, imagem, categoria,tipo,descricao, data,valor FROM produtos WHERE tipo = 'lançamento' ";
+    $resultado = executarQuery($mysqli, $sql);
+    return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+
+}
+function pagina($mysqli, $id){
+    $sql = "SELECT idProduto, produto, imagem, categoria,tipo,descricao, data,valor FROM produtos where idProduto = $id";
+    $resultado = executarQuery($mysqli, $sql);
+    return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+ 
+}
+/*function pagina($mysqli){
+    $sql = "SELECT
+         produtos.idProduto,
+         produtos.produto,
+         produtos.imagem,
+         produtos.categoria,
+         produtos.tipo,
+         produtos.descricao,
+         produtos.data,
+         produtos.valor,
+        FROM produtos WHERE produtos.idProduto = $idProduto";
+ 
+    $resultado = executarQuery($mysqli, $sql);
+    return mysqli_fetch_assoc($resultado);
+}
+    */
+    function masculino($mysqli){
+        $sql = "SELECT idProduto, produto, imagem, categoria,tipo,descricao, data,valor FROM produtos WHERE categoria = 'masculino' ";
+        $resultado = executarQuery($mysqli, $sql);
+        return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    
+    }
 ?>

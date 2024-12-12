@@ -1,4 +1,9 @@
-<?php require "../includes/cabecalho.php" ?>
+<?php require "../includes/cabecalho.php";
+require "../login/funcoes-produto.php"
+
+$masculino = masculino($mysqli);
+
+?>
 
 <link rel="stylesheet" href="estilosM.css">
 <body>
@@ -10,6 +15,7 @@
     </div>
 
     <div class="products-container">
+    <?php foreach($masculino as $produto){ ?>
         <div class="product-card">
             <img src="vestido.jpg" alt="Vestido">
             <h3>Vestido Elegante</h3>

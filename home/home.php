@@ -4,7 +4,9 @@
    
 
 
- $homeproduto = separacaoProduto($mysqli);
+ $destaque = destaques($mysqli);
+ $promocao = promocoes($mysqli);
+ $lancamento = lancamentos($mysqli);
 
 
 
@@ -39,17 +41,16 @@
             <button class="prev" onclick="rolagemEsquerda('destaques')">&#8592;</button>
 
             <div class="produtos-container" id="destaques">
-                <?php foreach($homeproduto as $produto){ ?>
-
+                <?php foreach($destaque as $produto){ ?>
                 
                 <div class="card">
-                    <a href="../produtos/pagina-produtos.php"></a>
+                <a href="../produtos/pagina-produtos.php?id=<?=$produto['idProduto']?>">
                     <img src="../home/imagens/<?=$produto['imagem']?>" alt="Produto Masculino">
                     <div class="info">
                         <h3><?= $produto['produto']?></h3>
                         <p>R$<?=$produto['valor']?></p>
                     </div>
-                </div>
+                </div></a>
             <?php } ?>
                
                 <!-- Adicione mais cards conforme necessário -->
@@ -65,38 +66,23 @@
             <button class="prev" onclick="rolagemEsquerda('promocao')">&#8592;</button>
 
             <div class="produtos-container" id="promocao">
+            <?php foreach($promocao as $produto) { ?>
                 <div class="card">
-                    <img src="imagens/calca-cargo.png" alt="Produto Masculino">
+                <a href="../produtos/pagina-produtos.php?id=<?=$produto['idProduto']?>">
+                    <img src="imagens/<?=$produto['imagem']?>" alt="Produto Masculino">
                     <div class="info">
-                        <h3>Camiseta</h3>
-                        <p>R$50</p>
+                        <h3><?=$produto['produto']?></h3>
+                        <p>R$ <?=$produto['valor']?></p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="imagens/produto-masculino2.png" alt="Produto Masculino">
-                    <div class="info">
-                        <h3>Jaqueta</h3>
-                        <p>R$200</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="imagens/produto-masculino2.png" alt="Produto Masculino">
-                    <div class="info">
-                        <h3>Jaqueta</h3>
-                        <p>R$200</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="imagens/produto-masculino2.png" alt="Produto Masculino">
-                    <div class="info">
-                        <h3>Jaqueta</h3>
-                        <p>R$200</p>
-                    </div>
-                </div>
+                </a>
+                <?php } ?>
                 <!-- Adicione mais cards conforme necessário -->
             </div>
+          
             <button class="next" onclick="rolagemDireita('promocao')">&#8594;</button>
         </div>
+       
     </div>
 
     <div class="categoria">
@@ -106,36 +92,22 @@
             <button class="prev" onclick="rolagemEsquerda('lancamentos')">&#8592;</button>
 
             <div class="produtos-container" id="lancamentos">
-                <div class="card">
-                    <img src="imagens/calca-cargo.png" alt="Produto Masculino">
+                
+                
+                <?php foreach($lancamento as $produto){ ?>
+                    <div class="card">
+                    <a href="../produtos/pagina-produtos.php?id=<?=$produto['idProduto']?>">
+                    <img src="imagens/<?=$produto['imagem']?>" alt="Produto Masculino">
                     <div class="info">
-                        <h3>Camiseta</h3>
-                        <p>R$50</p>
+                        <h3><?=$produto['produto']?></h3>
+                        <p>R$ <?=$produto['valor']?></p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="imagens/produto-masculino2.png" alt="Produto Masculino">
-                    <div class="info">
-                        <h3>Jaqueta</h3>
-                        <p>R$200</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="imagens/produto-masculino2.png" alt="Produto Masculino">
-                    <div class="info">
-                        <h3>Jaqueta</h3>
-                        <p>R$200</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="imagens/produto-masculino2.png" alt="Produto Masculino">
-                    <div class="info">
-                        <h3>Jaqueta</h3>
-                        <p>R$200</p>
-                    </div>
-                </div>
+                </a>
+
+                <?php } ?>
                 <!-- Adicione mais cards conforme necessário -->
-            </div>
+                </div>
             <button class="next" onclick="rolagemDireita('lancamentos')">&#8594;</button>
         </div>
     </div>

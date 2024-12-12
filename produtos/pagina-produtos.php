@@ -1,9 +1,11 @@
-<?php 
-require "../includes/cabecalho.php"
-require "../login/funcoes-produto.php"
+<?php
+require "../includes/cabecalho.php";
+require "../login/funcoes-produto.php";
       
+$idProduto = $_GET['id'];
 
-
+$paginaproduto = pagina($mysqli, $idProduto);
+ 
 ?>
     <title>Product Page</title>
   <link rel="stylesheet" href="estilos.css">  </link>
@@ -12,12 +14,13 @@ require "../login/funcoes-produto.php"
 <body>
     <div class="container">
         <div class="image-section">
-            <img src="..\home\imagens\calca-cargo.png" alt="Product Image">
+        <?php foreach($paginaproduto as $produto){ ?>
+            <img src="..\home\imagens\<?=$produto['imagem']?>" alt="Product Image">
         </div>
         <div class="details-section">
-            <h1>Calça Cargo Jeans Masculina</h1>
-            <p class="price">R$150,00</p>
-
+            <h1><?=$produto['produto']?></h1>
+            <p class="price">R$ <?=$produto['valor']?></p>
+            <?php } ?>
             <label for="size">Tamanho:</label>
             <select id="size">
                 <option value="P">P</option>
@@ -25,10 +28,11 @@ require "../login/funcoes-produto.php"
                 <option value="G">G</option>
                 <option value="GG">GG</option>
             </select>
-
+ 
             <button>Adicionar ao Carrinho</button>
-
+ 
             <div class="comments-section">
+               
     <h3>Deixe um Comentário</h3>
     <form action="#" method="post">
         <label for="rating">Avaliação:</label>
@@ -53,6 +57,6 @@ require "../login/funcoes-produto.php"
         </div>
     </div>
 </div>
-
+ 
 </body>
 </html>
