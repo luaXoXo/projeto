@@ -1,5 +1,5 @@
 <?php require "../includes/cabecalho.php";
-require "../login/funcoes-produto.php"
+require "../login/funcoes-produto.php";
 
 $masculino = masculino($mysqli);
 
@@ -17,25 +17,13 @@ $masculino = masculino($mysqli);
     <div class="products-container">
     <?php foreach($masculino as $produto){ ?>
         <div class="product-card">
-            <img src="vestido.jpg" alt="Vestido">
-            <h3>Vestido Elegante</h3>
-            <p>R$ 199,90</p>
+            <img src="../home/imagens/<?=$produto['imagem']?>" alt=" ">
+            <h3><?=$produto['produto']?></h3>
+            <p>R$ <?=$produto['valor']?></p>
             <a href="#">Comprar</a>
+            
         </div>
-
-        <div class="product-card">
-            <img src="sapato.jpg" alt="Sapato">
-            <h3>Sapato Social</h3>
-            <p>R$ 249,90</p>
-            <a href="#">Comprar</a>
-        </div>
-
-        <div class="product-card">
-            <img src="bolsa.jpg" alt="Bolsa">
-            <h3>Bolsa de Couro</h3>
-            <p>R$ 299,90</p>
-            <a href="#">Comprar</a>
-        </div>
+        <?php } ?>
     </div>
 
     <?php require "../includes/rodape.php"; ?>
